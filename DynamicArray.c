@@ -59,5 +59,8 @@ void resize(Vector *v){
 	v->data = realloc(v->data, sizeof(int) * v->capacity);
 }
 
-void clear(Vector *v);
+/* frees the memory */
+void clear(Vector *v){
+	free(v->data);
+}
 
