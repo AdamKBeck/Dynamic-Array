@@ -1,0 +1,9 @@
+Size of vector: 121
+Capacity of vector: 160
+Ratio (size/capacity): 0.756250
+
+Adding another element...
+
+Size of vector: 122
+Capacity of vector: 320
+Ratio (size/capacity): 0.381250
