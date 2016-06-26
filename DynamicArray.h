@@ -17,8 +17,8 @@ int get(Vector *v, int index);
 
 void replace(Vector *v, int index, int value);
 
-void resize(Vector *vector);
+void resize(Vector *v);
 
-void free(Vector *vector);
+void clear(Vector *v);
 
 #endif /* DYNAMICARRAY_H_ */
