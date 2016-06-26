@@ -15,7 +15,7 @@ void add(Vector *v, int value);
 
 int get(Vector *v, int index);
 
-void replace(Vector *v, int index, int value);
+void set(Vector *v, int index, int value);
 
 void resize(Vector *v);
 

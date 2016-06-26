@@ -36,7 +36,23 @@ int get(Vector *v, int index){
 	return v->data[index];
 }
 
-void replace(Vector *v, int index, int value);
+/* Replaces an element at a given index to a given value.
+ * Does not modify any elements given index < 0
+ * Resizes array and zero fills newly allocated memory when
+ * index > size */
+void set(Vector *v, int index, int value){
+	if (index < 0){
+		return;
+	}
+
+	/* zero fill in the case of index > size */
+	while (index > v->size){
+		add(v, 0);
+	}
+
+	/* Set new value */
+	v->data[index] = value;
+}
 
 void resize(Vector *v);
 
