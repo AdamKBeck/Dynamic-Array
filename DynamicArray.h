@@ -1,7 +1,7 @@
 #ifndef DYNAMICARRAY_H_
 #define DYNAMICARRAY_H_
 
-#define INITIAL_CAPACITY 100 // initial capacity of vector size
+#define INITIAL_CAPACITY 10 // initial capacity of vector size
 
 typedef struct{
 	int size; 		// elements used so far

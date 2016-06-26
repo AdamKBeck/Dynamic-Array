@@ -1,14 +1,9 @@
 /* A Vector is a dynamically sized array */
-
+//TODO: Add generic resizing functionality given a passed
+// resize value and a passed resize rate (e.g. 50% by tripling)
 #include <stdio.h>
 #include <stdlib.h>
 #include "DynamicArray.h"
-
-int main(){
-
-
-	return 0;
-}
 
 /* initialize size and capacity */
 void init(Vector *v){
@@ -54,7 +49,15 @@ void set(Vector *v, int index, int value){
 	v->data[index] = value;
 }
 
-void resize(Vector *v);
+/* Resizes the array when > 75% full by doubling*/
+//TODO: Add generic resizing functionality (see top of file)
+void resize(Vector *v){
+	if ( ((double)v->size / v->capacity) > .75){
+		v->capacity *= 2;
+	}
+
+	v->data = realloc(v->data, sizeof(int) * v->capacity);
+}
 
 void clear(Vector *v);
 
