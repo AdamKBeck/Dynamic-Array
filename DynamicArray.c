@@ -26,7 +26,15 @@ void add(Vector *v, int value){
 	v->size++;
 }
 
-int get(Vector *v, int index);
+/* Returns the value at a specified index.
+ * Returns the first element given an out of bounds index */
+int get(Vector *v, int index){
+	if (index < 0 || index > v->size){
+		return v->data[0];
+	}
+
+	return v->data[index];
+}
 
 void replace(Vector *v, int index, int value);
 
