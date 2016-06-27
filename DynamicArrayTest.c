@@ -24,7 +24,12 @@ int main(){
 	print(&v);
 	delete(&v, 3);
 
-	clear(&v);
+	print(&v);
 
+	printf("Size of vector: %d\n", v.size);
+	printf("Capacity of vector: %d\n", v.capacity);
+
+
+	clear(&v);
 	return 0;
 }

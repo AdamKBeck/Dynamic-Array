@@ -65,6 +65,9 @@ void clear(Vector *v){
 	v->size = 0;
 }
 
+//TODO: Consider halfing the capacity size and reallocating if deleting enough
+// elements falls under a certain threshold of size/capacity.
+
 /* Removes an element from the vector and reallocates memory accordingly.
  * Does not remove out of bounds indices */
 void delete(Vector *v, int index){
@@ -82,8 +85,8 @@ void delete(Vector *v, int index){
 
 	v->size--;
 
-	/* Print vector to confirm shifting works */
-	print(v);
+	/* Reallocate; the last element is unused*/
+	v->data = (int*)realloc(v->data, v->size * sizeof(int));
 
 }
 
