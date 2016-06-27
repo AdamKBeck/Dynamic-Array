@@ -21,4 +21,6 @@ void resize(Vector *v);
 
 void clear(Vector *v);
 
+void remove(Vector *v, int index);
+
 #endif /* DYNAMICARRAY_H_ */
