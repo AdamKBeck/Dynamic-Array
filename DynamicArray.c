@@ -59,8 +59,22 @@ void resize(Vector *v){
 	v->data = realloc(v->data, sizeof(int) * v->capacity);
 }
 
-/* frees the memory */
+/* Frees the memory */
 void clear(Vector *v){
 	free(v->data);
+	v->size = 0;
+}
+
+/* Removes an element from the vector and reallocates memory accordingly */
+void delete(Vector *v, int index){
+
+	v->size--;
+}
+
+/* Prints out each element in the vector */
+void print(Vector *v){
+	for (int i = 0; i < v->size; i++){
+		printf("%d ", v->data[i]);
+	}
 }
 

@@ -6,7 +6,7 @@ int main(){
 	Vector v;
 	init(&v);
 
-	for (int i = 0; i < 121; i++){
+	for (int i = 0; i < 8; i++){
 		add(&v, i);
 	}
 
@@ -20,6 +20,8 @@ int main(){
 	printf("Size of vector: %d\n", v.size);
 	printf("Capacity of vector: %d\n", v.capacity);
 	printf("Ratio (size/capacity): %f\n\n", (double)v.size/v.capacity);
+
+	print(&v);
 
 	clear(&v);
 

@@ -21,7 +21,7 @@ void resize(Vector *v);
 
 void clear(Vector *v);
 
-void remove(Vector *v, int index);
+void delete(Vector *v, int index);
 
 void print(Vector *v);
 
