@@ -65,10 +65,26 @@ void clear(Vector *v){
 	v->size = 0;
 }
 
-/* Removes an element from the vector and reallocates memory accordingly */
+/* Removes an element from the vector and reallocates memory accordingly.
+ * Does not remove out of bounds indices */
 void delete(Vector *v, int index){
 
+	if (index > v->size -1 || index < 0){
+		printf("Error, your index is out of bounds with the value of: %d", index);
+		return;
+	}
+
+	/* Shift all elements down  from removed element
+	 * and decrease the size of vector */
+	for (int i = index; i < v->size -1; i++){
+		v->data[i] = v->data[i+1];
+	}
+
 	v->size--;
+
+	/* Print vector to confirm shifting works */
+	print(v);
+
 }
 
 /* Prints out each element in the vector */
@@ -76,5 +92,7 @@ void print(Vector *v){
 	for (int i = 0; i < v->size; i++){
 		printf("%d ", v->data[i]);
 	}
+
+	printf("\n");
 }
 

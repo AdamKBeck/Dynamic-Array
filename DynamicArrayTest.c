@@ -22,6 +22,7 @@ int main(){
 	printf("Ratio (size/capacity): %f\n\n", (double)v.size/v.capacity);
 
 	print(&v);
+	delete(&v, 3);
 
 	clear(&v);
 
